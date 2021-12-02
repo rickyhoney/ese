@@ -1,0 +1,56 @@
+<html>
+    <head>
+     <title> ESERCITAZIONE </title>
+    </head>
+    <body>
+
+        <input id = "name" type= "text" name = "name">
+        <input id = "surname" type= "text" name = "surname">
+        <input id = "grade" type= "number" name = "grade">
+        <input id = "date" type= "date" name = "date">
+        <button id = "btn" > send </button>
+        
+        <table id="tabella">
+            <tr><td><div id= "div1">REGISTRO</div></td></tr>
+        </table>
+
+        <script src = https://code.jquery.com/jquery-3.6.0.min.js ></script>
+
+        <script>
+            $("#btn").click(function(){
+                
+            var nome = document.getElementById('name').value;
+                console.log(nome);  
+
+            var cognome = document.getElementById('surname').value;
+                console.log(cognome);  
+
+            var voto = document.getElementById('grade').value;
+
+            var data = document.getElementById('date').value;
+                console.log(data);  
+
+            var table = document.getElementById('tab');
+
+            var string = 
+            "<tr><td>" +
+            nome +
+            "</td><td style='text-align:center'>" +
+            cognome +
+            "</td><td>" +
+            voto + 
+            "</td><td>" +
+            data +
+            "</td><td>" ;
+                
+
+            $("#tabella").append(string);
+            
+            });
+        
+        </script>
+
+
+        
+    </body>
+    </html>
